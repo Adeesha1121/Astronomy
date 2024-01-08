@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Astronomy Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        p {
+            color: #000;
+            font-family: 'Times New Roman', serif;
+            font-size: 19px;
+        }
+
+        h2 {
+            color: #007bff;
+            font-size: 30px;
+        } 
+
+        h3 {
+            font-size: 22px;
+            text-align: left ;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 0 10px;
+            display: inline-block;
+            transition: background-color 0.5s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            margin-top: 30px;
+            padding: 40px; /* Adjust the padding as needed */
+            background-color: #ffffff; /* White background */
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%; /* Set the desired width, you can use a percentage or any valid CSS value */
+            margin-left: auto; /* Center the section */
+            margin-right: auto; /* Center the section */
+        }
+        img {
+            max-width: 50%;
+            height: auto; /* Set to auto for maintaining aspect ratio */
+            border-radius: 10px;
+            margin: auto; /* Center the image horizontally */
+            display: block; /* Ensure margin: auto works properly */
+        }
+
+        footer {
+     
+            color: rgb(0, 0, 0);
+            margin-top: 20px;    
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            font-size: 15px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Styles for mobile devices */
+            body {
+                margin: 10px;
+                position: relative;
+            }
+        
+            header {
+                background-color: #333;
+                color: white;
+                padding: 30px;
+                text-align: center;
+                font-size: xx-large;
+                border-width: 100%;
+            }
+
+            footer {
+                padding: 10px;
+                font-size: 14px;
+            }
+        
+            section {
+                width: 90%;
+                padding: 15px;
+            }
+        
+            nav {
+                overflow-x: auto; /* Add horizontal scroll */
+                white-space: nowrap; /* Prevent line breaks for links */
+            }
+        
+            nav a {
+                display: inline-block; /* Display links inline */
+                padding: 10px;
+                border-radius: 10px;
+                margin: 0px; /* Adjust margin as needed */
+                transition: background-color 0.3s;
+                width: fit-content;
+            }
+        
+            img {
+                max-width: 100%;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>All About Astronomy</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#planets">Planets</a>
+        <a href="#stars">Stars</a>
+        <a href="#galaxies">Galaxies</a>
+        <a href="#Telescopes">Telescopes</a>
+        <a href="#Observatories">Observatories</a>
+        <a href="#Space missions">Space Missions</a>
+        <a href="#Astronomy News">Astronomy News</a>
+        <a href="#Educational Resources">Educational Resources</a>
+        <a href="#Astronomy Events">Astronomy Events</a>
+        <a href="#Cosmology">Cosmology</a>
+        <a href="#Exoplanets">Exoplanets</a>
+        <a href="#Nebulae">Nebulae</a>
+        <a href="#Meteoroids, Asteroids, and Comets">Meteoroids, Asteroids, and Comets</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Astronomy!</h2>
+        <h5>Explore the Cosmos with Us</h5>
+        <p>🌌 Discover the Universe:
+            Embark on a cosmic journey as we unravel the mysteries of the vast universe. From dazzling galaxies to enigmatic black holes, our in-depth articles and visual guides will take you on an extraordinary exploration.</p>
+
+        <p>📰 Latest Discoveries:
+            Stay up-to-date with the cutting-edge discoveries and breakthroughs in the field of astronomy. Our curated news section brings you the most exciting developments from the world of space exploration.</p>    
+
+        <p>
+        🌠 Educational Resources:
+        Dive into a treasure trove of educational resources. From captivating videos to interactive infographics, we've crafted a learning space for astronomy enthusiasts of all level
+        </p>
+
+        <p>📸 Astrophotography Showcase:
+            Marvel at the beauty of the cosmos through the lens of talented astrophotographers. Each image tells a unique story of the breathtaking wonders that adorn our night sky.</p>
+
+        <p>📚 Astronomy Glossary:
+            Navigate the cosmos with confidence using our comprehensive astronomy glossary. Demystify the terminology and deepen your understanding of the celestial wonders that surround us.</p>
+
+        <p>Start your astronomical journey today. The wonders of the cosmos await!</p>
+    </section>
+
+    <section id="planets">
+        <h2>Planets</h2>
+
+        <div class="planet">
+            <h3>Mercury</h3>
+            <img src=https://cdn.mos.cms.futurecdn.net/xLXT69hv4k2U5pfKLBCanC-970-80.jpg alt="Mercury Placeholder Image">
+            <p>Mercury, the closest planet to the Sun, experiences extreme temperature variations between day and night due to its lack of atmosphere to retain heat. Its surface is adorned with craters and plains, making it a fascinating subject of study.</p>
+            <!-- Add more details, images, or links about Mercury as needed -->
+        </div>
+
+        <div class="planet">
+            <h3>Venus</h3>
+            <img src=https://cdn.mos.cms.futurecdn.net/oFF43BjXYUyyMTTJLFpeDE-970-80.jpg alt="Mercury Placeholder Image">
+            <p>Venus, similar in size and composition to Earth, boasts a thick atmosphere primarily composed of carbon dioxide, leading to a runaway greenhouse effect. Its surface showcases diverse features, including mountains, valleys, and plains.</p>
+            <!-- Add more details, images, or links about Venus as needed -->
+        </div>
+
+        <div class="planet">
+            <h3>Earth</h3>
+            <img src=https://cdn.mos.cms.futurecdn.net/iveQRwfraabDLCWpQexrSM-970-80.jpg alt="Mercury Placeholder Image">
+            <p>Earth, the only known planet with life, hosts a variety of environments such as oceans, continents, and diverse ecosystems. It supports a wide range of life forms, making it a unique and precious celestial body.</p>
+            <!-- Add more details, images, or links about Earth as needed -->
+        </div>
+
+        <div class="planet">
+            <h3>Mars</h3>
+            <img src=https://cdn.mos.cms.futurecdn.net/2KUL5GAYjMSqxkbKyRhgcH-970-80.jpg alt="Mercury Placeholder Image">
+            <p>Mars, known as the "Red Planet," features polar ice caps and evidence of past liquid water. Its surface displays a range of features, including volcanoes, canyons, and impact craters, making it a target of interest for scientific exploration.</p>
+            <!-- Add more details, images, or links about Mars as needed -->
+        </div>
+
+        <div class="planet">
+            <h3>Jupiter</h3>
+            <img src=https://cdn.mos.cms.futurecdn.net/EQXNd38mgCj7tjRj8s5eCV-970-80.jpg alt="Mercury Placeholder Image">
+            <p>Jupiter, the largest planet in our solar system, is primarily composed of hydrogen and helium. It boasts a strong magnetic field, numerous moons, and the iconic Great Red Spot—a massive storm that has captivated astronomers for centuries.</p>
+            <!-- Add more details, images, or links about Jupiter as needed -->
+        </div>
+
+        <div class="planet">
+            <h3>Saturn</h3>
+            <img src=https://cdn.mos.cms.futurecdn.net/Q8sqQo2cX5CNRWUABTG4sX-970-80.jpg alt="Mercury Placeholder Image">
+            <p>Saturn is renowned for its stunning ring system, composed of ice particles and rocks. Similar in composition to Jupiter, it features a diverse set of moons, including Titan, the second-largest moon in our solar system.</p>
+            <!-- Add more details, images, or links about Saturn as needed -->
+        </div>
+
+        <div class="planet">
+            <h3>Uranus</h3>
+            <img src=https://cdn.mos.cms.futurecdn.net/EeSXcXu8APAvp2pJPmsWdD-970-80.jpg alt="Mercury Placeholder Image">
+            <p>Uranus is uniquely tilted on its side, exhibiting an extreme axial tilt. It possesses a faint ring system and a collection of moons. Mostly composed of hydrogen, helium, and methane, Uranus adds to the diverse tapestry of our solar system.</p>
+            <!-- Add more details, images, or links about Uranus as needed -->
+        </div>
+
+        <div class="planet">
+            <h3>Neptune</h3>
+            <img src=https://cdn.mos.cms.futurecdn.net/h9tJU6wjnfJFtXEVzKY5V-970-80.jpg alt="Mercury Placeholder Image">
+            <p>Similar in composition to Uranus, Neptune boasts a dynamic atmosphere with visible storms, including the famous Great Dark Spot. It features a system of rings and numerous moons, contributing to the richness of our solar system.</p>
+            <!-- Add more details, images, or links about Neptune as needed -->
+        </div>
+    </section>
+
+    <section id="stars">
+        <h2>Stars</h2>
+        <p>Stars are celestial objects primarily composed of hydrogen and helium undergoing nuclear fusion in their cores, producing light and heat. Here are some key points about stars:</p>
+    
+        <h3>Sun</h3>
+        <ul>
+            <li>Our closest star, located at the center of the solar system.</li>
+            <li>A G-type main-sequence star (G2V).</li>
+            <li>Powers the solar system through nuclear fusion, converting hydrogen into helium.</li>
+        </ul>
+    
+        <h3>Classification</h3>
+        <p>Stars are classified based on their spectral characteristics, mainly determined by temperature. The classification system is O, B, A, F, G, K, M (from hottest to coolest).</p>
+    
+        <h3>Life Cycle</h3>
+        <p>Stars go through a life cycle that includes stages like nebula, protostar, main-sequence, red giant, and, for some, a supernova explosion, followed by a white dwarf, neutron star, or black hole.</p>
+    
+        <h3>Binary and Multiple Systems</h3>
+        <p>Many stars exist in binary (two stars orbiting a common center of mass) or multiple systems. Some binary systems transfer mass between stars, leading to complex interactions and evolutionary paths.</p>
+    
+        <h3>Star Clusters</h3>
+        <p>Groups of stars that form together due to a common origin in a molecular cloud. Open clusters are loosely bound, while globular clusters are densely packed.</p>
+    
+        <h3>Variable Stars</h3>
+        <p>Stars that exhibit variations in brightness over time. Types include Cepheid variables, RR Lyrae stars, and eclipsing binaries.</p>
+    
+        <h3>Neutron Stars and Black Holes</h3>
+        <p>Formed from the remnants of massive stars after a supernova. Neutron stars are incredibly dense, while black holes have gravitational forces so strong that nothing, not even light, can escape.</p>
+    
+        <h3>Galaxies</h3>
+        <p>Stars are organized into galaxies, enormous systems containing billions to trillions of stars. Our Milky Way is a barred spiral galaxy.</p>
+    
+        <h3>Stellar Spectra</h3>
+        <p>By analyzing the light emitted by stars, astronomers can determine their composition, temperature, density, mass, and relative motion.</p>
+    
+        <h3>Hertzsprung-Russell (H-R) Diagram</h3>
+        <p>A graph that correlates the luminosity and temperature of stars, revealing patterns and evolutionary stages.</p>
+    
+        <h3>Stellar Nucleosynthesis</h3>
+        <p>The process by which stars create new elements through nuclear fusion in their cores.</p>
+    
+        <p>Understanding stars is fundamental to astrophysics, as they play a crucial role in shaping the structure and evolution of galaxies and the universe as a whole. Ongoing research and advancements in observational technologies contribute to our expanding knowledge of stars and their properties.</p>
+    
+        <!-- Placeholder for images when necessary -->
+    </section>
+    
+
+    <section id="galaxies">
+        <h2>Galaxies</h2>
+        <p>Information about galaxies goes here.</p>
+    </section>
+
+    <section id="constellations">
+        <h2>Constellations</h2>
+        <p>Information about constellations goes here.</p>
+    </section>
+
+    <section id="telescopes">
+        <h2>Telescopes</h2>
+        <p>Explore different types of telescopes and their applications in astronomy.</p>
+    </section>
+
+    <section id="observatories">
+        <h2>Observatories</h2>
+        <p>Learn about famous observatories and their contributions to astronomy.</p>
+    </section>
+
+    <section id="space-missions">
+        <h2>Space Missions</h2>
+        <p>Discover past, present, and upcoming space missions that explore our universe.</p>
+    </section>
+
+    <section id="astronomy-news">
+        <h2>Astronomy News</h2>
+        <p>Stay updated with the latest news and discoveries in the field of astronomy.</p>
+    </section>
+
+    <section id="educational-resources">
+        <h2>Educational Resources</h2>
+        <p>Access educational materials, courses, and resources to enhance your understanding of astronomy.</p>
+    </section>
+
+    <section id="astronomy-events">
+        <h2>Astronomy Events</h2>
+        <p>Find information about upcoming astronomy events, stargazing sessions, and celestial phenomena.</p>
+    </section>
+
+    <section id="cosmology">
+        <h2>Cosmology</h2>
+        <p>Explore the large-scale structure and evolution of the universe, including topics like the Big Bang theory, dark matter, and dark energy.</p>
+    </section>
+
+    <section id="astrophysics">
+        <h2>Astrophysics</h2>
+        <p>Delve into the physics of celestial bodies, including stellar structure, nuclear fusion, and the life cycles of stars.</p>
+    </section>
+
+    <section id="exoplanets">
+        <h2>Exoplanets</h2>
+        <p>Learn about planets outside our solar system, their discovery, and their potential habitability.</p>
+    </section>
+
+    <section id="black-holes">
+        <h2>Black Holes</h2>
+        <p>Discover the mysterious world of black holes, their formation, properties, and their role in the cosmos.</p>
+    </section>
+
+    <section id="nebulae">
+        <h2>Nebulae</h2>
+        <p>Explore the various types of nebulae, including planetary nebulae, supernova remnants, and giant molecular clouds.</p>
+    </section>
+
+    <section id="meteoroids-asteroids-comets">
+        <h2>Meteoroids, Asteroids, and Comets</h2>
+        <p>Understand the differences between meteoroids, asteroids, and comets, and their impact on our solar system.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Astronomy Website</p>
+    </footer>
+
+    <footer>
+        <p>&copy; 2024 My Astronomy Website</p>
+    </footer>
+</body>
+</html>
