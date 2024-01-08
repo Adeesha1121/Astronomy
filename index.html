@@ -9,14 +9,16 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #000; /* Dark background color */
+            background-repeat: repeat; /* Repeat the background image */
+            background-size: cover; /* Cover the entire viewport with the background image */
         }
         
 
         p {
             color: #000;
             font-family: 'Times New Roman', serif;
-            font-size: 19px;
+            font-size: 20px;
         }
 
         h2 {
@@ -30,27 +32,29 @@
         }
 
         header {
-            background-color: #333;
             color: white;
+            background-color: #00000077;    
             padding: 20px;
             text-align: center;
             font-size: 30px;
         }
 
         nav {
-            background-color: #444;
             padding: 20px;
             text-align: center;
             position: relative;
+            background-color: #00000062;    
         }
+        
 
         nav a {
-            color: white;
+            color: rgb(255, 255, 255);
             text-decoration: none;
             padding: 10px;
             border-radius: 10px;
             margin: 0 10px;
             display: inline-block;
+            margin-top: 5px;
             transition: background-color 0.5s;
         }
 
@@ -61,7 +65,7 @@
         section {
             margin-top: 30px;
             padding: 35px; /* Adjust the padding as needed */
-            background-color: #ffffff; /* White background */
+            background-color: #ffffffef;
             border-radius: 20px;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
             width: 80%; /* Set the desired width, you can use a percentage or any valid CSS value */
@@ -88,6 +92,14 @@
             font-size: 15px;
         }
 
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: block;
+            z-index: -1; /* Move particles behind other elements */
+        }
+
         @media only screen and (max-width: 600px) {
             /* Styles for mobile devices */
             body {
@@ -96,8 +108,7 @@
             }
         
             header {
-                background-color: #333;
-                color: white;
+                    color: white;
                 padding: 30px;
                 text-align: center;
                 font-size: xx-large;
@@ -111,12 +122,30 @@
         
             section {
                 width: 90%;
-                padding: 15px;
+                padding: 20px;
+                background-color: #ffffffef;
             }
         
+            p {
+                color: #000;
+                font-family: 'Times New Roman', serif;
+                font-size: 19px;
+            }
+    
+            h2 {
+                color: #007bff;
+                font-size: 30px;
+            } 
+    
+            h3 {
+                font-size: 22px;
+                text-align: left ;
+            }
+
             nav {
-                overflow-x: auto; /* Add horizontal scroll */
-                white-space: nowrap; /* Prevent line breaks for links */
+                overflow: scroll;
+                white-space: nowrap; 
+                background-color: #ff000000;
             }
         
             nav a {
@@ -160,22 +189,22 @@
 
     <section id="home">
         <h2>Welcome to Astronomy!</h2>
-        <h5>Explore the Cosmos with Us</h5>
-        <p>🌌 Discover the Universe:</p><p>
+        <h4>Explore the Cosmos with Us</h4>
+        <h3>🌌 Discover the Universe:</h3><p>
             Embark on a cosmic journey as we unravel the mysteries of the vast universe. From dazzling galaxies to enigmatic black holes, our in-depth articles and visual guides will take you on an extraordinary exploration.</p>
 
-        <p>📰 Latest Discoveries:</p><p>
+        <h3>📰 Latest Discoveries:</h3><p>
             Stay up-to-date with the cutting-edge discoveries and breakthroughs in the field of astronomy. Our curated news section brings you the most exciting developments from the world of space exploration.</p>    
 
-        <p>
-        🌠 Educational Resources:</p><p>
+        <h3>
+        🌠 Educational Resources:</h3><p>
         Dive into a treasure trove of educational resources. From captivating videos to interactive infographics, we've crafted a learning space for astronomy enthusiasts of all level
         </p>
 
-        <p>📸 Astrophotography Showcase:</p><p>
+        <h3>📸 Astrophotography Showcase:</h3><p>
             Marvel at the beauty of the cosmos through the lens of talented astrophotographers. Each image tells a unique story of the breathtaking wonders that adorn our night sky.</p>
 
-        <p>📚 Astronomy Glossary:</p><p>
+        <h3>📚 Astronomy Glossary:</h3><p>
             Navigate the cosmos with confidence using our comprehensive astronomy glossary. Demystify the terminology and deepen your understanding of the celestial wonders that surround us.</p>
         <p> </p>
         <p>Start your astronomical journey today. The wonders of the cosmos await!</p>
@@ -406,6 +435,76 @@
     <footer>
         <p>&copy; 2024 My Astronomy Website</p>
     </footer>
+
+    <canvas id="particleCanvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+    
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    
+        const particles = [];
+        const numStars = 500; // Adjust the number of stars 
+    
+        class Particle {
+            constructor(x, y, radius, color) {
+                this.x = x;
+                this.y = y;
+                this.radius = radius;
+                this.color = color;
+                this.speed = Math.random() * 2 + 1;
+                this.angle = Math.random() * Math.PI * 2;
+            }
+    
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+    
+            update() {
+                this.x += Math.cos(this.angle) * this.speed;
+                this.y += Math.sin(this.angle) * this.speed;
+                this.angle += 0.02;
+    
+                // Wrap around the canvas to keep stars on the screen
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+        }
+    
+        // Create stars at random positions on the canvas
+        for (let i = 0; i < numStars; i++) {
+            const x = Math.random() * canvas.width;
+            const y = Math.random() * canvas.height;
+            const radius = Math.random() * 2; // Adjust the size of stars
+            const color = '#fff'; // White color for stars
+            particles.push(new Particle(x, y, radius, color));
+        }
+    
+        function animateStars() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+            }
+    
+            requestAnimationFrame(animateStars);
+        }
+    
+        animateStars();
+
+
+        
+    </script>
+    
+
 
 </body>
 </html>
