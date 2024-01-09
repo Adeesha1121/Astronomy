@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000; /* Dark background color */
+            background-color: #000000;
             background-repeat: repeat; /* Repeat the background image */
             background-size: cover; /* Cover the entire viewport with the background image */
         }
@@ -30,10 +30,17 @@
             font-size: 22px;
             text-align: left ;
         }
+        
+        h5 {
+            color: #ffffff;
+            font-size: 10;
+
+        }
+
 
         header {
             color: white;
-            background-color: #00000077;    
+            background: linear-gradient(to bottom, #1d1d1d44, #00000000); /* Adjust the colors as needed */
             padding: 20px;
             text-align: center;
             font-size: 30px;
@@ -43,7 +50,9 @@
             padding: 20px;
             text-align: center;
             position: relative;
-            background-color: #00000062;    
+            background-color: #00000000;    
+            font-size: 15px;
+
         }
         
 
@@ -86,10 +95,10 @@
      
             color: rgb(0, 0, 0);
             margin-top: 20px;    
+            font-style: italic;
             text-align: center;
             position: absolute;
             width: 100%;
-            font-size: 15px;
         }
 
         canvas {
@@ -142,10 +151,17 @@
                 text-align: left ;
             }
 
+            h5 {
+                color: #ffffff;
+                font-size: 20;
+
+            }    
+            
             nav {
                 overflow: scroll;
                 white-space: nowrap; 
                 background-color: #ff000000;
+                font-size: 20px;
             }
         
             nav a {
@@ -529,7 +545,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 My Astronomy Website</p>
+        <h5>&copy; 2024 My Astronomy Website</h5>
     </footer>
 
     <canvas id="particleCanvas"></canvas>
@@ -562,9 +578,11 @@
             }
     
             update() {
+                // Introduce more randomness to the angle
+                this.angle += (Math.random() - 0.5) * 0.1;
+    
                 this.x += Math.cos(this.angle) * this.speed;
                 this.y += Math.sin(this.angle) * this.speed;
-                this.angle += 0.02;
     
                 // Wrap around the canvas to keep stars on the screen
                 if (this.x > canvas.width) this.x = 0;
@@ -595,10 +613,8 @@
         }
     
         animateStars();
-
-
-        
     </script>
+    
     
 
 
